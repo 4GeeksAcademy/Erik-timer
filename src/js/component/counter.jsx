@@ -9,7 +9,7 @@ const Timer = () => {
     fifth: 9,
     fourth: 9,
     third: 9,
-    second: 9,
+  second: 9,
     first:0
   });
 
@@ -42,31 +42,29 @@ useEffect(() => {
        }
 
 
-        return { first, second, third,fourth,fifth };
+        return { first, second, third, fourth, fifth };
       });
     }, 1000);
+  
 // el ,1000 al final es para ejecutarlo cada 1 segundo
-
 
 return () => clearInterval(interval);
   }, []);
 
 
-  // El padStart sirve para poner digitos de 1,2,3... unidades etz (en este caso 1)
-  const Times = (time) => {
-    return time.toString().padStart(1, '0');
 
-  };
+  // El padStart sirve para poner digitos de 1,2,3... unidades etz (en este caso 1)
+
 
     
   return (
     <div className="counter px-5 font-family-monospace">
       <div className="icon border-bottom border-white px-2 font-monospace"><i class="fa-solid fa-clock"></i></div>
-      <div className="hour border-bottom border-white px-2 font-monospace">{Times(time.fifth)}</div>
-      <div className="minute border-bottom border-white px-2 font-monospace">{Times(time.fourth)}</div>
-      <div className="second border-bottom border-white px-2 font-monospace">{Times(time.third)}</div>
-      <div className="second border-bottom border-white px-2 font-monospace">{Times(time.second)}</div>
-      <div className="second border-bottom border-white px-2 font-monospace">{Times(time.first)}</div>
+      <div className="hour border-bottom border-white px-2 font-monospace">{time.fifth}</div>
+      <div className="minute border-bottom border-white px-2 font-monospace">{time.fourth}</div>
+      <div className="second border-bottom border-white px-2 font-monospace">{time.third}</div>
+      <div className="second border-bottom border-white px-2 font-monospace">{time.second}</div>
+      <div className="second border-bottom border-white px-2 font-monospace">{time.first}</div>
     </div>
   );
 };
